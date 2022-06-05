@@ -9,8 +9,8 @@ import net.minecraft.network.protocol.login.PacketLoginInStart;
 import net.minecraft.server.network.PlayerConnection;
 import net.minecraft.server.network.ServerConnection;
 import org.bukkit.Bukkit;
-import org.bukkit.craftbukkit.v1_18_R1.CraftServer;
-import org.bukkit.craftbukkit.v1_18_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_18_R2.CraftServer;
+import org.bukkit.craftbukkit.v1_18_R2.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -294,7 +294,7 @@ public abstract class Protocol {
             PlayerConnection connection = ((CraftPlayer)player).getHandle().b;
             NetworkManager manager = connection.a;
 
-            channelLookup.put(player.getName(), channel = manager.k);
+            channelLookup.put(player.getName(), channel = manager.m);
         }
 
         return channel;

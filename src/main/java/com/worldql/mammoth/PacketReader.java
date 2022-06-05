@@ -8,7 +8,7 @@ import io.netty.handler.codec.MessageToMessageDecoder;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.PacketPlayOutAnimation;
 import net.minecraft.server.network.PlayerConnection;
-import org.bukkit.craftbukkit.v1_18_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_18_R2.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
 import java.lang.reflect.Field;
@@ -23,7 +23,7 @@ public class PacketReader {
 
     private void inject(Player player) {
         CraftPlayer craftPlayer = (CraftPlayer) player;
-        Channel channel = craftPlayer.getHandle().b.a.k;
+        Channel channel = craftPlayer.getHandle().b.a.m;
         //channels.put(player.getUniqueId(), channel);
 
         if (channel.pipeline().get("PacketInjector") != null) {
